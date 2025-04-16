@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brothers & Sisters Hangout Survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .survey-container {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      padding: 30px 40px;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff5e62;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 2px solid #fda085;
+      font-size: 1em;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #444;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1em;
+      background-color: #ff5e62;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff2e4d;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .survey-container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="survey-container">
+    <h1>✨ BROTHERS & SISTERS HANGOUT SURVEY ✨</h1>
+    <form>
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your lovely name">
+
+      <label>Interested in Hangout?</label>
+      <div class="radio-group">
+        <input type="radio" id="yes" name="interested" value="yes">
+        <label for="yes">YES</label><br>
+        <input type="radio" id="no" name="interested" value="no">
+        <label for="no">NO</label>
+      </div>
+
+      <label for="destination">Where to go?</label>
+      <select id="destination" name="destination">
+        <option disabled selected>Choose a destination</option>
+        <option>BHUBANESWAR</option>
+        <option>BALIGUDA</option>
+        <option>MANIKAGUDA</option>
+        <option>ANYWHERE OUT OF ODISHA</option>
+      </select>
+
+      <label for="timing">When to go?</label>
+      <select id="timing" name="timing">
+        <option disabled selected>Pick a time</option>
+        <option>AFTER MITALI'S WORK IS DONE</option>
+        <option>MAY</option>
+        <option>JUNE</option>
+        <option>JULY</option>
+      </select>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="permission" name="permission">
+        <label for="permission">I promise there won’t be any problem in getting permission from parents 😇</label>
+      </div>
+
+      <button type="submit">🚀 LET'S GO!</button>
+    </form>
+  </div>
+
+</body>
+</html>
